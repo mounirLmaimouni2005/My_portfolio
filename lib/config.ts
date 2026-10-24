@@ -9,15 +9,15 @@ export const PROFILE = {
 
 type Box = readonly [number, number, number, number];
 export const HOTSPOTS: { label: string; href: string; box: Box }[] = [
-  { label: "About", href: "#about", box: [683, 15, 82, 37] },
-  { label: "Projects", href: "#projects", box: [773, 15, 92, 37] },
-  { label: "Technologies", href: "#technologies", box: [873, 15, 127, 37] },
-  { label: "Contact", href: "#contact", box: [1011, 15, 90, 37] },
-  { label: "Hire me", href: "#contact", box: [1116, 15, 123, 37] },
+  { label: "About", href: "#about", box: [683.5, 13.5, 76, 38] },
+  { label: "Projects", href: "#projects", box: [772.5, 13.5, 89, 38] },
+  { label: "Technologies", href: "#technologies", box: [874.5, 13.5, 125, 38] },
+  { label: "Contact", href: "#contact", box: [1012.5, 13.5, 89, 38] },
+  { label: "Hire me", href: "#contact", box: [1116.5, 13.5, 123, 38] },
   { label: "View projects", href: "#projects", box: [88, 468, 174, 45] },
   { label: "Contact me", href: "#contact", box: [288, 468, 158, 45] },
   { label: "Go to contact", href: "#contact", box: [1282, 652, 28, 28] },
-  { label: "Home", href: "#top", box: [80, 12, 210, 42] },
+  { label: "Home", href: "#top", box: [76, 10, 218, 44] },
 ];
 export const PLATES: Box[] = [[84, 557, 164, 139], [257, 557, 165, 139], [432, 557, 166, 139], [608, 557, 166, 139]];
 export const CASE: Box = [1137, 536, 203, 175];

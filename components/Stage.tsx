@@ -43,10 +43,23 @@ export default function Stage() {
       </div>
       <div className="lamp" aria-hidden="true" />
       <div className="dim" aria-hidden="true" />
-      {HOTSPOTS.map((h) => (
-        <a key={h.label} className="hs" href={h.href} style={box(h.box)}><span className="sr-only">{h.label}</span></a>
-      ))}
-      <ThemeButton id="th2" className="hs" style={box([1264, 13, 40, 40])} />
+      {HOTSPOTS.map((h) => {
+        const isHeader = ["About", "Projects", "Technologies", "Contact", "Hire me"].includes(h.label);
+        const isPill = ["View projects", "Contact me"].includes(h.label);
+        const isCircle = h.label === "Go to contact";
+        return (
+          <a
+            key={h.label}
+            className={`hs ${isHeader ? "hs-nav" : ""} ${isPill ? "hs-pill" : ""} ${isCircle ? "hs-circle" : ""}`.trim()}
+            data-hs={h.label.toLowerCase().replace(/\s+/g, "-")}
+            href={h.href}
+            style={box(h.box)}
+          >
+            <span className="sr-only">{h.label}</span>
+          </a>
+        );
+      })}
+      <ThemeButton id="th2" className="hs hs-nav" style={box([1264.5, 12.5, 39, 39])} />
       <div className="sr-only">
         <h1>{PROFILE.name}</h1>
         <p>{PROFILE.role}</p>
